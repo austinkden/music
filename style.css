@@ -155,8 +155,8 @@ input.search:focus {
         #4B0B0B  /* Dark Violet */
 
     );
-    background-size: 3000% 100%; /* Gradient will be larger for smoother animation */
-    animation: darkRainbowAnimation 10s linear infinite; /* Smooth animation loop */
+    background-size: 5000% 100%; /* Gradient will be larger for smoother animation */
+    animation: darkRainbowAnimation 13s linear infinite; /* Smooth animation loop */
 }
 
 
