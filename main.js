@@ -51,11 +51,8 @@ function loadSong(song) {
 function playSong() {
   audio.play();
   playButton.innerHTML = '<i class="fas fa-pause"></i>';
-  document.querySelector('.now-playing').classList.add('playing'); // Add the class to start the gradient animation
+  document.querySelector('.now-playing').classList.add('playing'); // Add the class to start the animation
 }
-
-
-
 
 function pauseSong() {
   audio.pause();
@@ -128,6 +125,29 @@ audio.addEventListener('timeupdate', () => {
 });
 
 // Seek the song when the progress bar is changed
+document.getElementById('progress-bar').addEventListener('input', (event) => {
+  const seekTime = (event.target.value / 100) * audio.duration;
+  audio.currentTime = seekTime;
+});
+function updateProgressBar() {
+  const progressBar = document.getElementById('progress-bar');
+  const progress = (audio.currentTime / audio.duration) * 100;
+
+  // Set the background gradient to fill behind the dot
+  progressBar.style.backgroundImage = `linear-gradient(to right, var(--color-heading) ${progress}%, var(--color-tile) ${progress}%)`;
+
+  progressBar.value = progress;
+
+  // Continuously update the progress bar as the song plays
+  requestAnimationFrame(updateProgressBar);
+}
+
+// Ensure the progress bar updates while the song is playing
+audio.addEventListener('play', () => {
+  requestAnimationFrame(updateProgressBar);
+});
+
+// Seek the song when the progress bar is manually adjusted
 document.getElementById('progress-bar').addEventListener('input', (event) => {
   const seekTime = (event.target.value / 100) * audio.duration;
   audio.currentTime = seekTime;
