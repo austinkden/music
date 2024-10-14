@@ -12,8 +12,6 @@ const searchBar = document.getElementById("search-bar");
 const searchResultsContainer = document.querySelector(".search-results");
 
 const songs = [
-  { name: "MVA Structure Involved", artist: "South Metro Fire Rescue", src: "songs/StructureInvolvedMVA.mp3" },
-  { name: "Low Tones", artist: "South Metro Fire Rescue", src: "songs/LowTones.mp3" },
   { name: "Goosebumps", artist: "HVME", src: "songs/GoosebumpsHVME.mp3" },
   { name: "Stars", artist: "VIZE", src: "songs/StarsVIZE.mp3" },
   { name: "Through and Through", artist: "khai dreams", src: "songs/ThroughAndThroughkhaidreams.mp3" },
@@ -130,6 +128,13 @@ function updateProgressBar() {
 audio.addEventListener('play', () => {
   updateProgressBar(); // Initial update
   setInterval(updateProgressBar, 100); // Update every 100 milliseconds
+});
+
+// Add this event listener to the audio object
+audio.addEventListener('ended', () => {
+  currentSongIndex = (currentSongIndex + 1) % songs.length; // Move to the next song
+  loadSong(songs[currentSongIndex]); // Load the new song
+  playSong(); // Play the new song
 });
 
 // Seek the song when the progress bar is manually adjusted
