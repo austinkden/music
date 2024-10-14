@@ -134,23 +134,36 @@ input.search:focus {
     overflow: hidden;  /* Prevent any content from spilling outside */
 }
 
-@keyframes gradientAnimation {
+@keyframes darkRainbowAnimation {
     0% {
-        background-position: 0% 50%;
+        background-color: #4B0B0B; /* Dark Red */
+    }
+    16.67% {
+        background-color: #7E4B0B; /* Dark Orange */
+    }
+    33.33% {
+        background-color: #B7B00B; /* Dark Yellow */
     }
     50% {
-        background-position: 100% 50%; /* Midpoint of the animation */
+        background-color: #3D7E0B; /* Dark Green */
+    }
+    66.67% {
+        background-color: #0B4B7E; /* Dark Blue */
+    }
+    83.33% {
+        background-color: #4B0B7E; /* Dark Indigo */
     }
     100% {
-        background-position: 0% 50%; /* Reset back to the start smoothly */
+        background-color: #4B0B0B; /* Dark Violet */
     }
 }
 
 .now-playing.playing {
-    background: linear-gradient(40deg, var(--color-primary), var(--color-surface));
-    background-size: 200% 200%; /* Double the size for the animation effect */
-    animation: gradientAnimation 3s ease infinite; /* Adjusted duration for faster animation */
+    background: linear-gradient(90deg, #4B0B0B, #7E4B0B, #B7B00B, #3D7E0B, #0B4B7E, #4B0B7E, #4B0B0B);
+    background-size: 300% 100%; /* Increase size for animation effect */
+    animation: darkRainbowAnimation 3s linear infinite; /* Animation settings */
 }
+
 
 
 .now-playing .song-name {
