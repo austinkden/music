@@ -121,7 +121,7 @@ input.search:focus {
 
 .now-playing {
     margin-bottom: 20px;
-    height: 20%;
+    height: 30%;
     padding: 20px;
     border-radius: 16px;
     display: flex;
@@ -156,7 +156,7 @@ input.search:focus {
         #4B0B0B  /* Dark Violet */
 
     );
-    background-size: 3000% 95%; /* Gradient will be larger for smoother animation */
+    background-size: 3000% 100%; /* Gradient will be larger for smoother animation */
     animation: darkRainbowAnimation 10s linear infinite; /* Smooth animation loop */
 }
 
