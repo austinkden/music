@@ -138,16 +138,20 @@ input.search:focus {
     0% {
         background-position: 0% 50%;
     }
+    50% {
+        background-position: 100% 50%; /* Midpoint of the animation */
+    }
     100% {
-        background-position: 100% 50%;
+        background-position: 0% 50%; /* Reset back to the start smoothly */
     }
 }
 
 .now-playing.playing {
-    background: linear-gradient(40deg, var(--color-primary), var(--color-surface));
+    background: linear-gradient(270deg, var(--color-primary), var(--color-surface));
     background-size: 200% 200%; /* Double the size for the animation effect */
-    animation: gradientAnimation 5s ease infinite; /* Animation settings */
+    animation: gradientAnimation 3s ease infinite; /* Adjusted duration for faster animation */
 }
+
 
 .now-playing .song-name {
     color: var(--color-heading);
