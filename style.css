@@ -136,33 +136,28 @@ input.search:focus {
 
 @keyframes darkRainbowAnimation {
     0% {
-        background-color: #4B0B0B; /* Dark Red */
-    }
-    16.67% {
-        background-color: #7E4B0B; /* Dark Orange */
-    }
-    33.33% {
-        background-color: #B7B00B; /* Dark Yellow */
-    }
-    50% {
-        background-color: #3D7E0B; /* Dark Green */
-    }
-    66.67% {
-        background-color: #0B4B7E; /* Dark Blue */
-    }
-    83.33% {
-        background-color: #4B0B7E; /* Dark Indigo */
+        background-position: 0% 0%; /* Start from the left */
     }
     100% {
-        background-color: #4B0B0B; /* Dark Violet */
+        background-position: 100% 0%; /* Move to the right */
     }
 }
 
 .now-playing.playing {
-    background: linear-gradient(90deg, #4B0B0B, #7E4B0B, #B7B00B, #3D7E0B, #0B4B7E, #4B0B7E, #4B0B0B);
-    background-size: 300% 100%; /* Increase size for animation effect */
-    animation: darkRainbowAnimation 3s linear infinite; /* Animation settings */
+    background: linear-gradient(90deg, 
+        #4B0B0B, /* Dark Red */
+        #7E4B0B, /* Dark Orange */
+        #B7B00B, /* Dark Yellow */
+        #3D7E0B, /* Dark Green */
+        #0B4B7E, /* Dark Blue */
+        #4B0B7E, /* Dark Indigo */
+        #4B0B0B  /* Dark Violet */
+    );
+    background-size: 400% 100%; /* Increase the size for better movement */
+    animation: darkRainbowAnimation 6s linear infinite; /* Adjusted duration for smoother animation */
+    filter: brightness(0.9); /* Darken the gradient a bit */
 }
+
 
 
 
