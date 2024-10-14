@@ -1,1 +1,1 @@
-A simple HTML/JS/CSS starter template
+A full on music player. Music is hosted in the repository.
