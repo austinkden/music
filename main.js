@@ -116,3 +116,16 @@ searchBar.addEventListener("input", (event) => {
 
 // Display all songs on initial load
 displaySearchResults("");
+
+// Update progress bar as the song plays
+audio.addEventListener('timeupdate', () => {
+  const progressBar = document.getElementById('progress-bar');
+  const progress = (audio.currentTime / audio.duration) * 100;
+  progressBar.value = progress;
+});
+
+// Seek the song when the progress bar is changed
+document.getElementById('progress-bar').addEventListener('input', (event) => {
+  const seekTime = (event.target.value / 100) * audio.duration;
+  audio.currentTime = seekTime;
+});

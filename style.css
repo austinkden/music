@@ -228,3 +228,30 @@ input.search:focus {
     background: var(--color-primary);
     border-radius: 12px;
 }
+
+.now-playing input[type="range"] {
+    width: 100%;
+    height: 6px;
+    border-radius: 10px;
+    background-color: var(--color-mid);
+    outline: none;
+    appearance: none;
+    margin-bottom: 10px; /* Space between progress bar and buttons */
+  }
+  
+  .now-playing input[type="range"]::-webkit-slider-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-heading);
+    border-radius: 50%;
+    cursor: pointer;
+    appearance: none;
+  }
+  
+  .now-playing input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background-color: var(--color-heading);
+    border-radius: 50%;
+    cursor: pointer;
+  }  
