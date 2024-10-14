@@ -37,9 +37,6 @@ const songs = [
 
 let currentSongIndex = 0;
 
-// Load the first song
-loadSong(songs[currentSongIndex]);
-
 function loadSong(song) {
   audio.src = song.src;
   songName.textContent = song.name;
@@ -115,12 +112,11 @@ displaySearchResults("");
 
 // Progress bar update
 function updateProgressBar() {
-  const progressBar = document.getElementById('progress-bar');
+  const progressBar = document.getElementById('song-progress-active');
   const progress = (audio.currentTime / audio.duration) * 100;
 
   // Set the background gradient to fill behind the dot
-  progressBar.style.backgroundImage = `linear-gradient(to right, var(--color-heading) ${progress}%, var(--color-tile) ${progress}%)`;
-
+  progressBar.style.width = `${progress}%`;
   progressBar.value = progress;
 }
 
