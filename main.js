@@ -51,8 +51,11 @@ function loadSong(song) {
 function playSong() {
   audio.play();
   playButton.innerHTML = '<i class="fas fa-pause"></i>';
-  document.querySelector('.now-playing').classList.add('playing'); // Add the class to start the animation
+  document.querySelector('.now-playing').classList.add('playing'); // Add the class to start the gradient animation
 }
+
+
+
 
 function pauseSong() {
   audio.pause();
