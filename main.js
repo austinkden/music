@@ -8,11 +8,17 @@ const searchBar = document.getElementById("search-bar");
 const searchResultsContainer = document.querySelector(".search-results");
 
 const songs = [
-    { name: "MVA Structure Involved", artist: "South Metro Fire Rescue", src: "songs/StructureInvolvedMVA.mp3" },
-    { name: "Low Tones", artist: "South Metro Fire Rescue", src: "songs/LowTones.mp3" },
-    { name: "Goosebumps", artist: "HVME", src: "songs/GoosebumpsHVME.mp3" },
-    { name: "Stars", artist: "VIZE", src: "songs/StarsVIZE.mp3" },
-    { name: "Through and Through", artist: "khai dreams", src: "songs/ThroughAndThroughkhaidreams.mp3" },
+  { name: "MVA Structure Involved", artist: "South Metro Fire Rescue", src: "songs/StructureInvolvedMVA.mp3" },
+  { name: "Low Tones", artist: "South Metro Fire Rescue", src: "songs/LowTones.mp3" },
+  { name: "Goosebumps", artist: "HVME", src: "songs/GoosebumpsHVME.mp3" },
+  { name: "Stars", artist: "VIZE", src: "songs/StarsVIZE.mp3" },
+  { name: "Through and Through", artist: "khai dreams", src: "songs/ThroughAndThroughkhaidreams.mp3" },
+  { name: "Bulletproof", artist: "La Roux", src: "songs/BulletproofLaRoux.mp3" },
+  { name: "Nevada", artist: "Vicetone", src: "songs/NevadaVicetone.mp3" },
+  { name: "Lullaby", artist: "Sigala", src: "songs/LullabySigala.mp3" },
+  { name: "Glad You Came", artist: "VIZE", src: "songs/GladYouCameVIZE.mp3" },
+  { name: "Can You Feel It", artist: "BoyWithUke", src: "songs/CanYouFeelItBoyWithUke.mp3" },
+  { name: "Under My Breath", artist: "NOTD", src: "songs/UnderMyBreathNOTD.mp3" },
 ];
 
 let currentSongIndex = 0;
