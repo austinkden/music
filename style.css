@@ -132,32 +132,6 @@ input.search:focus {
     box-sizing: border-box;  /* Include padding in width calculations */
     overflow: hidden;  /* Prevent any content from spilling outside */
 }
-@keyframes darkRainbowAnimation {
-    0% {
-        background-position: 0% 0%; /* Start from the left */
-    }
-    50% {
-        background-position: 50% 50%; /* Move to the center */
-    }
-    100% {
-        background-position: 100% 0%; /* Move to the right */
-    }
-}
-
-.now-playing.playing {
-    background: linear-gradient(90deg, 
-        #4B0B0B, /* Dark Red */
-        #7E4B0B, /* Dark Orange */
-        #B7B00B, /* Dark Yellow */
-        #3D7E0B, /* Dark Green */
-        #0B4B7E, /* Dark Blue */
-        #4B0B7E, /* Dark Indigo */
-        #4B0B0B  /* Dark Violet */
-
-    );
-    background-size: 5000% 100%; /* Gradient will be larger for smoother animation */
-    animation: darkRainbowAnimation 13s linear infinite; /* Smooth animation loop */
-}
 
 
 .now-playing .song-name {
