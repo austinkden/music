@@ -19,13 +19,13 @@ const songs = [
   { name: "Glad You Came", artist: "VIZE", src: "songs/GladYouCameVIZE.mp3" },
   { name: "Can You Feel It", artist: "BoyWithUke", src: "songs/CanYouFeelItBoyWithUke.mp3" },
   { name: "Under My Breath", artist: "NOTD", src: "songs/UnderMyBreathNOTD.mp3" },
-  { name: "All For Love (Luca Schreiner Remix)", artist: "Tun...", src: "songs/AllForLoveLucaSchreinerRemix.mp3" }, // Replace "Tun..." with the actual artist's last name
+  { name: "All For Love (Luca Schreiner Remix)", artist: "Tungevaag & Raaban", src: "songs/AllForLoveLucaSchreinerRemix.mp3" }, 
   { name: "Born For This", artist: "The Score", src: "songs/BornForThisTheScore.mp3" },
   { name: "Keep You Mine", artist: "NOTD", src: "songs/KeepYouMineNOTD.mp3" },
   { name: "Panic", artist: "NOTD", src: "songs/PanicNOTD.mp3" },
   { name: "Revolution", artist: "The Score", src: "songs/RevolutionTheScore.mp3" },
   { name: "Rise", artist: "Jonas Blue", src: "songs/RiseJonasBlue.mp3" },
-  { name: "Show Me Love (EDX Remix, Radio Edit)", artist: "...", src: "songs/ShowMeLoveEDXRemixRadioEdit.mp3" }, // Replace "..." with the actual artist's name
+  { name: "Show Me Love (EDX Remix, Radio Edit)", artist: "Sam Feldt", src: "songs/ShowMeLoveEDXRemixRadioEdit.mp3" },
   { name: "So Close", artist: "NOTD", src: "songs/SoCloseNOTD.mp3" },
   { name: "Young & Foolish", artist: "Loud Luxury", src: "songs/YoungFoolishLoudLuxury.mp3" },
   { name: "Head Down", artist: "Lost Frequencies", src: "songs/HeadDownLostFrequencies.mp3" },
