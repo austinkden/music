@@ -207,6 +207,8 @@ input.search:focus {
     cursor: pointer;
     background-color: var(--color-tile);
     font-size: 20px;
+    border: 1px solid var(--color-heading);
+    box-shadow: 0px 0px 8px var(--color-heading);
 }
 
 .now-playing .buttons button:hover {
