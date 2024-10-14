@@ -121,12 +121,11 @@ input.search:focus {
 
 .now-playing {
     margin-bottom: 20px;
-    height: 30%;
+    height: 25%;
     padding: 20px;
     border-radius: 16px;
     display: flex;
     align-items: center;
-    justify-content: space-around;  /* Space items equally with space around them */
     flex-direction: column;
     width: 100%;  /* Ensure it fits within the container */
     max-width: 100%;  /* Prevent it from expanding beyond container width */
@@ -184,6 +183,7 @@ input.search:focus {
     max-width: 100%;  /* Prevent it from expanding beyond container width */
     overflow: hidden;  /* Prevent any content from spilling outside */
     padding-bottom: 3px;
+    margin-bottom: 15px;
 }
 
 .now-playing .buttons {
