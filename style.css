@@ -133,13 +133,15 @@ input.search:focus {
     box-sizing: border-box;  /* Include padding in width calculations */
     overflow: hidden;  /* Prevent any content from spilling outside */
 }
-
 @keyframes darkRainbowAnimation {
     0% {
         background-position: 0% 0%; /* Start from the left */
     }
+    50% {
+        background-position: 50% 50%; /* Move to the center */
+    }
     100% {
-        background-position: 200% 0%; /* Move to the right, allowing more space */
+        background-position: 100% 0%; /* Move to the right */
     }
 }
 
@@ -153,13 +155,9 @@ input.search:focus {
         #4B0B7E, /* Dark Indigo */
         #4B0B0B  /* Dark Violet */
     );
-    background-size: 300% 100%; /* Ensure the gradient is large enough */
-    animation: darkRainbowAnimation 6s linear infinite; /* Loop the animation */
-    filter: brightness(0.7); /* Darken the gradient a bit */
+    background-size: 3000% 100%; /* Gradient will be larger for smoother animation */
+    animation: darkRainbowAnimation 10s linear infinite; /* Smooth animation loop */
 }
-
-
-
 
 
 .now-playing .song-name {
