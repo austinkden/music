@@ -147,7 +147,7 @@ input.search:focus {
 }
 
 .now-playing.playing {
-    background: linear-gradient(270deg, var(--color-primary), var(--color-surface));
+    background: linear-gradient(40deg, var(--color-primary), var(--color-surface));
     background-size: 200% 200%; /* Double the size for the animation effect */
     animation: gradientAnimation 3s ease infinite; /* Adjusted duration for faster animation */
 }
