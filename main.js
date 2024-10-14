@@ -11,8 +11,9 @@ const songs = [
     { name: "MVA Structure Involved", artist: "South Metro Fire Rescue", src: "songs/StructureInvolvedMVA.mp3" },
     { name: "Low Tones", artist: "South Metro Fire Rescue", src: "songs/LowTones.mp3" },
     { name: "Goosebumps", artist: "HVME", src: "songs/GoosebumpsHVME.mp3" },
-    // Add more songs as needed
-  ];
+    { name: "Stars", artist: "VIZE", src: "songs/StarsVIZE.mp3" },
+    { name: "Through and Through", artist: "khai dreams", src: "songs/ThroughAndThroughkhaidreams.mp3" },
+];
 
 let currentSongIndex = 0;
 
