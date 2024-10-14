@@ -1,4 +1,9 @@
 const audio = new Audio(); // Create an Audio object
+audio.addEventListener('error', () => {
+  alert('Failed to load the song. Please try again.');
+});
+
+
 const playButton = document.getElementById("play");
 const backButton = document.getElementById("back");
 const nextButton = document.getElementById("next");
@@ -43,17 +48,18 @@ function loadSong(song) {
   songArtist.textContent = song.artist;
 }
 
-// Function to play the song
 function playSong() {
   audio.play();
   playButton.innerHTML = '<i class="fas fa-pause"></i>';
+  document.querySelector('.now-playing').classList.add('playing'); // Add the class to start the animation
 }
 
-// Function to pause the song
 function pauseSong() {
   audio.pause();
   playButton.innerHTML = '<i class="fas fa-play"></i>';
+  document.querySelector('.now-playing').classList.remove('playing'); // Remove the class to stop the animation
 }
+
 
 // Function to display search results
 function displaySearchResults(searchTerm) {

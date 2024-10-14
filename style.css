@@ -134,6 +134,21 @@ input.search:focus {
     overflow: hidden;  /* Prevent any content from spilling outside */
 }
 
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+.now-playing.playing {
+    background: linear-gradient(40deg, var(--color-primary), var(--color-surface));
+    background-size: 200% 200%; /* Double the size for the animation effect */
+    animation: gradientAnimation 5s ease infinite; /* Animation settings */
+}
+
 .now-playing .song-name {
     color: var(--color-heading);
     font-size: 24px;
