@@ -3,7 +3,6 @@ audio.addEventListener('error', () => {
   alert('Failed to load the song. Please try again.');
 });
 
-
 const playButton = document.getElementById("play");
 const backButton = document.getElementById("back");
 const nextButton = document.getElementById("next");
@@ -37,6 +36,7 @@ const songs = [
 
 ];
 
+
 let currentSongIndex = 0;
 
 // Load the first song
@@ -59,7 +59,6 @@ function pauseSong() {
   playButton.innerHTML = '<i class="fas fa-play"></i>';
   document.querySelector('.now-playing').classList.remove('playing'); // Remove the class to stop the animation
 }
-
 
 // Function to display search results
 function displaySearchResults(searchTerm) {
@@ -102,8 +101,7 @@ nextButton.addEventListener("click", () => {
 });
 
 backButton.addEventListener("click", () => {
-  currentSongIndex =
-    (currentSongIndex - 1 + songs.length) % songs.length;
+  currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
   loadSong(songs[currentSongIndex]);
   playSong();
 });
@@ -117,18 +115,7 @@ searchBar.addEventListener("input", (event) => {
 // Display all songs on initial load
 displaySearchResults("");
 
-// Update progress bar as the song plays
-audio.addEventListener('timeupdate', () => {
-  const progressBar = document.getElementById('progress-bar');
-  const progress = (audio.currentTime / audio.duration) * 100;
-  progressBar.value = progress;
-});
-
-// Seek the song when the progress bar is changed
-document.getElementById('progress-bar').addEventListener('input', (event) => {
-  const seekTime = (event.target.value / 100) * audio.duration;
-  audio.currentTime = seekTime;
-});
+// Progress bar update
 function updateProgressBar() {
   const progressBar = document.getElementById('progress-bar');
   const progress = (audio.currentTime / audio.duration) * 100;
@@ -137,14 +124,12 @@ function updateProgressBar() {
   progressBar.style.backgroundImage = `linear-gradient(to right, var(--color-heading) ${progress}%, var(--color-tile) ${progress}%)`;
 
   progressBar.value = progress;
-
-  // Continuously update the progress bar as the song plays
-  requestAnimationFrame(updateProgressBar);
 }
 
 // Ensure the progress bar updates while the song is playing
 audio.addEventListener('play', () => {
-  requestAnimationFrame(updateProgressBar);
+  updateProgressBar(); // Initial update
+  setInterval(updateProgressBar, 100); // Update every 100 milliseconds
 });
 
 // Seek the song when the progress bar is manually adjusted
