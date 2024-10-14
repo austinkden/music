@@ -138,10 +138,10 @@ input.search:focus {
         background-position: 0% 0%; /* Start from the left */
     }
     50% {
-        background-position: 47.5% 47.5%; /* Move to the center */
+        background-position: 50% 50%; /* Move to the center */
     }
     100% {
-        background-position: 95% 0%; /* Move to the right */
+        background-position: 100% 0%; /* Move to the right */
     }
 }
 
@@ -154,7 +154,6 @@ input.search:focus {
         #0B4B7E, /* Dark Blue */
         #4B0B7E, /* Dark Indigo */
         #4B0B0B  /* Dark Violet */
-        #4B0B0B, /* Dark Red */
 
     );
     background-size: 3000% 95%; /* Gradient will be larger for smoother animation */
