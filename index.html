@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music Player</title>
+  <link href='/style.css' rel='stylesheet'>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+  <div class="surface search left" id="search">
+    <input type="text" id="search-bar" class="tile search input" placeholder="Search...">
+    <div class="search-results">
+      <div class="tile search-item" id="search-item">
+        <h1 class="name">Name</h1>
+        <p class="artist">Artist</p>
+      </div>
+    </div>
+  </div>
+  <div class="container right">
+    <div class="surface now-playing">
+      <h1 class="song-name">Song</h1>
+      <h2 class="song-artist">Artist</h2>
+      <div class="buttons">
+        <button class="back" id="back"><i class="fas fa-backward"></i></button>
+        <button class="play" id="play"><i class="fas fa-play"></i></button>
+        <button class="next" id="next"><i class="fas fa-forward"></i></button>
+      </div>
+    
+    </div>
+  </div>
+  <script defer type="text/javascript" src="/main.js"></script>
+</body>
+</html>
